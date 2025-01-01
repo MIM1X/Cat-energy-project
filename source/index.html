@@ -45,7 +45,7 @@
       </section>
 
       <!-- Секция каталого питания -->
-      <section class="catalogs">
+      <section class="page-main__catalogs catalogs">
         <h2 class="visually-hidden">Каталоги питания для котов</h2>
         <div class="catalogs__wrapper">
           <ul class="catalogs__list">
@@ -69,6 +69,99 @@
               <a class="catalogs__link" href="#">Каталог Pro</a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Секция как это работает -->
+      <section class="page-main__how-it-works how-it-works">
+        <div class="how-it-works__wrapper">
+          <h2 class="how-it-works__title">Как это работает</h2>
+          <ol class="how-it-works__list">
+            <li class="how-it-works__item how-it-works__item--leaf">
+              <p class="how-it-works__description">
+                Функциональное питание содержит только полезные питательные
+                вещества.
+              </p>
+            </li>
+            <li class="how-it-works__item how-it-works__item--powder">
+              <p class="how-it-works__description">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
+              </p>
+            </li>
+            <li class="how-it-works__item how-it-works__item--flatware">
+              <p class="how-it-works__description">
+                Замените один-два приема обычной еды на наше функциональное
+                питание.
+              </p>
+            </li>
+            <li class="how-it-works__item how-it-works__item--clock">
+              <p class="how-it-works__description">
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                питомца!
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Секция живого примера -->
+      <section class="page-main__example example">
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+            Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
+            этом он не менял своих привычек и по-прежнему спит по 16 часов в
+            день.
+          </p>
+          <dl class="example__list">
+            <div class="example__item">
+              <dt class="example__description">Cнижение веса</dt>
+              <dd class="example__value">5 кг</dd>
+            </div>
+            <div class="example__item">
+              <dt class="example__description">Затрачено времени</dt>
+              <dd class="example__value">60 дней</dd>
+            </div>
+          </dl>
+          <dl class="example__total-price">
+            <dt class="example__description">Затраты на питание:</dt>
+            <dd class="example__value">15 000 руб.</dd>
+          </dl>
+        </div>
+
+        <!-- Слайдер котов -->
+        <div class="example__slider">
+          <div class="example__slide">
+            <img
+              src="img/cat-before.png"
+              alt="Фотография полного кота до использования функционального питания"
+            />
+          </div>
+          <div class="example__slide">
+            <img
+              src="img/cat-after.png"
+              alt="Фотография стройного кота после использования функционального питания"
+            />
+          </div>
+
+          <!-- Переключатели фотографий -->
+          <div class="example__control control">
+            <button
+              class="control__button control__button--before"
+              type="button"
+            >
+              <span class="visually-hidden">Было</span>
+            </button>
+            <input class="control__toggle" type="range" value="50" />
+            <button
+              class="control__button control__button--after"
+              type="button"
+            >
+              <span class="control__description">Стало</span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
