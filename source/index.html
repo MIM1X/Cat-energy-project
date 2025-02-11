@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
+    <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8" />
     <title>Cat Energy - Главная</title>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="icon/logo-mobile.svg" alt="Cat Energy" />
-      </a>
-      <a class="logo-text">
-        <img src="icon/logo-text.svg" alt="Cat Energy" />
-      </a>
+      <div class="page-header__logo-container logo-container">
+        <a class="logo-container__logo">
+          <img src="icon/logo-mobile.svg" alt="Cat Energy" />
+        </a>
+        <a class="logo-container__logo-text">
+          <img src="icon/logo-text.svg" alt="Cat Energy" />
+        </a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -32,7 +35,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="promo">
+      <section class="page-main_promo promo">
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__lead">Занялся собой? Займись котом!</p>
@@ -158,7 +161,6 @@
             >
               <span class="visually-hidden">Было</span>
             </button>
-            <input class="control__toggle" type="range" value="50" />
             <button
               class="control__button control__button--after"
               type="button"
@@ -223,8 +225,15 @@
             </li>
           </ul>
           <div class="page-footer__academy academy">
-            <a class="academy__link" href="#">HTML Academy</a>
-            <a class="academy__logo" href="#">
+            <a
+              class="academy__link"
+              href="https://htmlacademy.ru/intensive/adaptive"
+              >HTML Academy</a
+            >
+            <a
+              class="academy__logo"
+              href="https://htmlacademy.ru/intensive/adaptive"
+            >
               <img src="icon/htmlacademy.svg" width="27px" height="34px"
             /></a>
           </div>
