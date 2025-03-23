@@ -1,0 +1,39 @@
+.main-nav {
+  grid-column: 1/-1;
+  position: relative;
+
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    display: flex;
+    align-content: center;
+  }
+
+  &--closed {
+    display: none;
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &--opend {
+    display: block;
+  }
+
+  &--nojs &__wrapper {
+    position: static;
+  }
+
+  &__wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: @white;
+
+    @media (min-width: @tablet-width) {
+      position: static;
+      background-color: transparent;
+    }
+  }
+}

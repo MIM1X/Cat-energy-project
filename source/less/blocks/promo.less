@@ -1,0 +1,115 @@
+.promo {
+  position: relative;
+  text-align: center;
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+    text-align: left;
+
+    background-color: transparent;
+    background-image: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      height: 700px;
+      width: 50vw;
+      top: -80px;
+    }
+  }
+
+  &::before {
+    background-color: fade(@basic_green, 85%);
+    z-index: -1;
+  }
+
+  &::after {
+    background-image: url(../img/cat-background-phone.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  &__title {
+    font-family: @headlineFont;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      width: 500px;
+    }
+  }
+
+  &__lead {
+    font-family: @headlineFont;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 25px 0 30px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 40px 0 50px;
+    }
+  }
+
+  &__img {
+    width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 708px;
+      height: 608px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 550px;
+      height: 500px;
+      position: absolute;
+      bottom: 20%;
+      left: 39vw;
+      z-index: -1;
+    }
+  }
+
+  &__button {
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+
+      width: 245px;
+      height: 55px;
+
+      margin-bottom: 525px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 270px;
+    }
+  }
+}

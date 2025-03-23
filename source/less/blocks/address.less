@@ -1,0 +1,30 @@
+.address {
+  &__info {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+    }
+  }
+  &__title {
+    font-family: @headlineFont;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: @special_dark-grey-2;
+  }
+  &__subtitle {
+    font-family: @textFont;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: @special_dark-grey;
+  }
+}

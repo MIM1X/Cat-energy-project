@@ -1,0 +1,21 @@
+.academy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: left;
+    gap: 22px;
+    width: auto;
+  }
+
+  &__link {
+    font-family: @textFont;
+    font-weight: 400;
+    font-size: 16px;
+    color: @special_dark-grey;
+    text-decoration: none;
+  }
+}

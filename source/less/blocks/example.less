@@ -1,0 +1,106 @@
+.example {
+  background-color: @basic_grey-2;
+
+  &__wrapper {
+    padding: 25px 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      padding: 25px 30px 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 25px 110px 40px;
+      flex-direction: row;
+    }
+  }
+
+  &__info-wrapper {
+    @media (min-width: @desktop-width) {
+      width: 440px;
+    }
+  }
+
+  &__title {
+    font-family: "oswald", "arial", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: left;
+    color: @black;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: @textFont;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: @special_dark-grey;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: column;
+      justify-content: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  &__description {
+    font-family: @textFont;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: @special_dark-grey;
+  }
+
+  &__value {
+    font-family: @headlineFont;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: @black;
+    margin: 0;
+  }
+
+  &__total-price {
+    font-family: @headlineFont;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @black;
+  }
+
+  &__slide {
+    img {
+      width: 280px;
+    }
+  }
+}
