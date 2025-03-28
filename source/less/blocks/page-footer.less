@@ -20,4 +20,42 @@
       padding: 55px 110px;
     }
   }
+
+  &__logo {
+    line-height: 0;
+    margin-bottom: 32px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+
+      & img {
+        width: 128px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__social-list {
+    padding: 20px 0;
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
+  }
+
+  &__academy {
+    margin-top: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
+  }
 }

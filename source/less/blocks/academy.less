@@ -17,5 +17,29 @@
     font-size: 16px;
     color: @special_dark-grey;
     text-decoration: none;
+
+    @media (min-width: @tablet-width) {
+      width: max-content;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__logo {
+    line-height: 0;
+
+    &:hover svg path {
+      fill: @basic_green;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 }
