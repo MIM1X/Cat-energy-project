@@ -4,6 +4,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="icon"
+      href="../source/icon/favicon/152.svg"
+      type="image/svg+xml"
+    />
+    <link rel="apple-touch-icon" href="/source/icon/favicon/152.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <title>Cat Energy - Главная</title>
   </head>
   <body class="page__body">
@@ -11,10 +19,30 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo-container logo-container">
           <a class="logo-container__logo" href="#">
-            <img src="icon/logo-mobile.svg" alt="Cat Energy" />
+            <picture>
+              <source
+                media="(min-width: 1225px)"
+                srcset="icon/logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="icon/logo-tablet.svg"
+              />
+              <img src="icon/logo-mobile.svg" alt="Cat Energy" />
+            </picture>
           </a>
           <a class="logo-container__logo-text" href="#">
-            <img src="icon/logo-text.svg" alt="Cat Energy" />
+            <picture>
+              <source
+                media="(min-width: 1225px)"
+                srcset="icon/logo-text--desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="icon/logo-text--tablet.svg"
+              />
+              <img src="icon/logo-text--mobile.svg" alt="Cat Energy" />
+            </picture>
           </a>
         </div>
         <button
@@ -31,10 +59,10 @@
               <a href="#">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Подбор программы</a>
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -206,7 +234,7 @@
       <div class="page-footer__wrapper">
         <h2 class="visually-hidden">Социальные сети</h2>
         <a class="page-footer__logo" href="#">
-          <img src="icon/logo-text.svg" alt="Cat Energy" />
+          <img src="icon/logo-text--mobile.svg" alt="Cat Energy" />
         </a>
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">

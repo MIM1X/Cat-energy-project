@@ -4,9 +4,25 @@
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
+    padding-top: 2px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+    padding-top: 0;
+  }
+
   &__logo,
   &__logo-text {
     line-height: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
