@@ -34,17 +34,17 @@
     background-color: @basic_grey;
 
     display: grid;
-    grid-template-columns: 78px 1fr;
+    grid-template-columns: 71px 1fr;
     grid-template-rows: max-content max-content max-content;
-    //доделать каталоги
-    padding: 30px 20px 30px;
+
+    padding: 30px 20px 22px;
 
     @media (min-width: @tablet-width) {
       grid-template-columns: 340px 1fr;
       grid-template-rows: max-content max-content max-content;
 
       box-sizing: border-box;
-      padding: 77px 52px 53px;
+      padding: 77px 52px 62px;
     }
 
     @media (min-width: @desktop-width) {
@@ -53,28 +53,30 @@
       grid-template-columns: 162px 1fr;
       grid-template-rows: max-content max-content max-content;
 
-      padding: 47px 52px 55px;
+      padding: 47px 52px 62px;
     }
 
     &--slim .catalogs__icon {
       background-image: url(../icon/cat_tall.svg);
       margin-top: -9px;
+      margin-left: 2px;
 
       @media (min-width: @tablet-width) {
-        margin-left: calc(50% + 25px);
+        margin-top: -15px;
+        margin-left: calc(50% + 22px);
         transform: translate(-50%);
 
         width: 200px;
       }
 
       @media (min-width: @desktop-width) {
-        margin: 0;
-        margin-top: -6px;
-        margin-left: -2px;
+        margin-top: -8px;
+        padding-bottom: 2px;
+        margin-left: 0;
         transform: none;
 
         width: 100px;
-        height: 100px;
+        height: 105px;
       }
     }
 
@@ -84,14 +86,16 @@
       margin-left: -7px;
 
       @media (min-width: @tablet-width) {
-        margin: 15px -20px 0 20px;
+        margin: 14px -22px 0 18px;
 
         height: 200px;
       }
 
       @media (min-width: @desktop-width) {
         margin: 0;
-        margin-left: -34px;
+        margin-top: -1px;
+        margin-left: -33px;
+        padding-bottom: 1px;
 
         width: 100%;
         height: 100px;
@@ -156,13 +160,13 @@
       line-height: 24px;
       color: @black;
 
-      margin: 24px 0 48px;
+      margin: 25px 0 56px;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1/-1;
 
-      margin: 39px 0 23px;
+      margin: 42px 0 31px;
     }
 
     &::after {
@@ -170,7 +174,7 @@
       display: block;
       height: 1px;
       width: 100%;
-      margin: 20px 0;
+      margin: 21px 0 19px;
       background-color: #d9d9d9;
 
       @media (min-width: @tablet-width) {
@@ -181,7 +185,7 @@
   &__link {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 17px;
     font-family: @headlineFont;
     font-weight: 400;
     font-size: 16px;
@@ -199,10 +203,14 @@
 
       font-size: 20px;
       line-height: 20px;
+
+      gap: 25px;
     }
 
     @media (min-width: @desktop-width) {
       grid-column: 1/-1;
+
+      gap: 28px;
     }
 
     &:active {

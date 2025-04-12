@@ -1,15 +1,16 @@
 .how-it-works {
   &__wrapper {
     padding: 0 20px;
-    margin: 20px 0 50px;
+    margin: 20px 0 49px;
 
     @media (min-width: @tablet-width) {
       padding: 0 30px;
-      margin: 45px 0 110px;
+      margin: 45px 0 101px;
     }
 
     @media (min-width: @desktop-width) {
       padding: 0 110px;
+      margin: 71px 0 84px;
     }
   }
   &__list {
@@ -25,8 +26,8 @@
     @media (min-width: @tablet-width) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      row-gap: 135px;
-      column-gap: 180px;
+      row-gap: 132px;
+      column-gap: 60px;
 
       counter-reset: how-it-works__num;
     }
@@ -34,7 +35,7 @@
     @media (min-width: @desktop-width) {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
-      column-gap: 125px;
+      column-gap: 65px;
     }
   }
 
@@ -51,19 +52,25 @@
 
       grid-template-columns: 80px 1fr;
       grid-template-rows: 80px 72px;
-      gap: 30px;
+      gap: 33px;
 
       &::after {
         content: counter(how-it-works__num);
         counter-increment: how-it-works__num;
         position: absolute;
         bottom: -60px;
-        right: 0;
+        right: 76px;
         font-family: @headlineFont;
         font-size: 280px;
         line-height: 280px;
         color: @basic_grey;
         z-index: -1;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: 15px;
       }
     }
 
@@ -96,6 +103,12 @@
     color: @black;
     margin: 0;
     margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 72px;
+    }
   }
 
   &__description {
@@ -104,7 +117,7 @@
     font-size: 14px;
     line-height: 18px;
     color: @special_dark-grey;
-    margin: 0;
+    margin: 2px 0 0;
 
     grid-column: 2/-1;
 
@@ -112,6 +125,7 @@
       font-size: 16px;
       line-height: 24px;
       color: @special_dark-grey;
+      width: 260px;
 
       grid-column: 1/-1;
     }
