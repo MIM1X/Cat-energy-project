@@ -35,5 +35,16 @@
       position: static;
       background-color: transparent;
     }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: right;
+    }
+  }
+
+  &__site-list {
+    @media (min-width: @desktop-width) {
+      width: 41vw;
+    }
   }
 }
