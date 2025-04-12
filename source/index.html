@@ -73,11 +73,15 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__lead">Занялся собой? Займись котом!</p>
-          <img
-            class="promo__img"
-            src="img/cat-food.png"
-            alt="Баночка оранжевого цвета с кошачьей едой со вкусом курицы, надписью 100% натурально и весом 500 граммов"
-          />
+          <picture>
+            <source type="image/webp" srcset="img/cat-food.webp" />
+
+            <img
+              class="promo__img"
+              src="img/cat-food.png"
+              alt="Баночка оранжевого цвета с кошачьей едой со вкусом курицы, надписью 100% натурально и весом 500 граммов"
+            />
+          </picture>
           <button class="promo__button button" type="button">
             Подобрать программу
           </button>
