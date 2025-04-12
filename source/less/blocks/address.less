@@ -22,14 +22,21 @@
     }
   }
 
-  &__wrapper-map {
-    & iframe {
-      @media (min-width: @tablet-width) {
-        height: 400px;
-      }
+  &__map--nojs,
+  &__map {
+    @media (min-width: @tablet-width) {
+      height: 400px;
     }
   }
 
+  &__map--js {
+    display: none;
+  }
+
+  &__map--nojs {
+    display: block;
+    object-fit: cover;
+  }
   &__title {
     width: 139px;
     font-family: @headlineFont;
