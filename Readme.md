@@ -1,7 +1,6 @@
-# Личный проект «projectTitle»
+# Личный проект «Cat-Energy»
 
 - Студент: [Марк Иванов](https://htmlacademy.ru/profile/id2555293).
-- Наставник: `Неизвестно`.
 
 ---
 
