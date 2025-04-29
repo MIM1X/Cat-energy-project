@@ -1,11 +1,12 @@
 import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
-
+import terser from 'gulp-terser';
 // Styles
 
 export const styles = () => {
@@ -25,6 +26,14 @@ const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+export const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
 }
 
 // Server

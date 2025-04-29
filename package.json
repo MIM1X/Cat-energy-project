@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "cat-energy",
   "private": true,
   "description": "Личный проект от HTML Academy",
   "devDependencies": {
@@ -8,9 +8,11 @@
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^9.0.0",
     "gulp-less": "5.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
+    "gulp-terser": "^2.1.0",
     "postcss": "8.3.11",
     "stylelint": "^16.14.1",
     "stylelint-config-htmlacademy": "^4.2.3"
