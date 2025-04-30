@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import imagemin from 'gulp-imagemin';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
@@ -7,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
+
 // Styles
 
 export const styles = () => {
@@ -30,7 +30,7 @@ const html = () => {
 
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
@@ -57,7 +57,21 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
-export default gulp.series(
-  styles, server, watcher
+// Development task
+export const dev = gulp.series(
+  styles,
+  server,
+  watcher
 );
+
+// Build task
+export const build = gulp.series(
+  gulp.parallel(
+    styles,
+    html,
+    scripts
+  ),
+);
+
+// Default task (for development)
+export default dev;

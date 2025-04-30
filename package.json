@@ -8,7 +8,6 @@
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^9.0.0",
     "gulp-less": "5.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
@@ -24,8 +23,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
-    "start": "gulp"
+    "build": "gulp build",
+    "start": "gulp dev"
   },
   "browserslist": [
     "last 2 versions",
