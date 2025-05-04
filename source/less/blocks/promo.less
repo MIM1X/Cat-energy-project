@@ -11,15 +11,15 @@
     background-image: none;
   }
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     height: 302px;
     width: 100%;
     top: 0;
     right: 0;
-    right: 0;
+    background-color: fade(@basic_green, 85%);
+    z-index: -1;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -33,25 +33,26 @@
     }
   }
 
-  &::before {
-    background-color: fade(@basic_green, 85%);
-    z-index: -1;
-  }
-
-  &::after {
-    background-image: url(../../img/cat-background-phone.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  &__background {
+    position: absolute;
+    height: 302px;
+    width: 100%;
+    top: 0;
+    right: 0;
     z-index: -2;
+    object-fit: cover;
+    object-position: 50% 50%;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url(../../img/cat-background-phone@x2.png);
+    @media (min-width: @tablet-width) {
+      display: none;
     }
 
     @media (min-width: @desktop-width) {
-      background-image: url(../img/cat-background-desktop.png);
-      background-position: 100%;
+      display: block;
+      height: 700px;
+      width: 50vw;
+      top: -112px;
+      object-position: 100%;
     }
   }
 

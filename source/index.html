@@ -4,10 +4,18 @@
     <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Магазин питания для котов" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="icon/favicon/152.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon/favicon/152.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link
+      rel="preload"
+      href="./fonts/oswaldregular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <title>Cat Energy - Главная</title>
   </head>
   <body class="page__body">
@@ -69,6 +77,34 @@
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
           <p class="promo__lead">Занялся собой? Займись котом!</p>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="img/cat-background-desktop.webp"
+              media="(min-width: 1225px)"
+            />
+            <source
+              type="image/png"
+              srcset="img/cat-background-desktop.png"
+              media="(min-width: 1225px)"
+            />
+            <source
+              type="image/webp"
+              srcset="img/cat-background-phone@x2.webp"
+              media="(min-resolution: 2dppx)"
+            />
+            <source
+              type="image/png"
+              srcset="img/cat-background-phone@x2.png"
+              media="(min-resolution: 2dppx)"
+            />
+            <source type="image/webp" srcset="img/cat-background-phone.webp" />
+            <img
+              class="promo__background"
+              src="img/cat-background-phone.png"
+              alt="Облизывающийся красивый кот"
+            />
+          </picture>
           <picture>
             <source type="image/webp" srcset="img/cat-food.webp" />
 
@@ -182,14 +218,24 @@
           <div class="example__slider-wrapper">
             <!-- Слайдер котов -->
             <div class="example__slide">
-              <img
-                src="img/cat-before.png"
-                alt="Фотография полного кота до использования функционального питания"
-              />
-              <img
-                src="img/cat-after.png"
-                alt="Фотография стройного кота после использования функционального питания"
-              />
+              <picture>
+                <source type="image/webp" srcset="img/cat-before.webp" />
+                <img
+                  class="example__img example__img--before"
+                  src="img/cat-before.png"
+                  alt="Фотография полного кота до использования функционального питания"
+                  loading="lazy"
+                />
+              </picture>
+              <picture>
+                <source type="image/webp" srcset="img/cat-after.webp" />
+                <img
+                  class="example__img example__img--after"
+                  src="img/cat-after.png"
+                  alt="Фотография стройного кота после использования функционального питания"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <!-- Переключатели фотографий -->
             <div class="example__control control">
@@ -288,27 +334,6 @@
     </footer>
 
     <!-- ДжаваСкрипт -->
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".page-header__toggle");
-      var adrsMap = document.querySelector(".address__map--nojs");
-
-      navMain.classList.remove("main-nav--nojs");
-      adrsMap.classList.remove("address__map--nojs");
-
-      navToggle.addEventListener("click", function () {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opend");
-          navToggle.classList.remove("page-header__toggle--closed");
-          navToggle.classList.add("page-header__toggle--opend");
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opend");
-          navToggle.classList.add("page-header__toggle--closed");
-          navToggle.classList.remove("page-header__toggle--opend");
-        }
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

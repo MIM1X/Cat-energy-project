@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  color: @special_dark-grey;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -15,8 +15,8 @@
     font-family: @textFont;
     font-weight: 400;
     font-size: 16px;
-    color: @special_dark-grey;
     text-decoration: none;
+    color: @special_dark-grey;
 
     @media (min-width: @tablet-width) {
       width: max-content;
@@ -33,12 +33,13 @@
 
   &__logo {
     line-height: 0;
+    color: @special_grey-2;
 
-    &:hover svg path {
-      fill: @basic_green;
+    &:hover {
+      color: @basic_green;
     }
 
-    &:active svg {
+    &:active {
       opacity: 0.3;
     }
   }

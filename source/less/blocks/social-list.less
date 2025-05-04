@@ -32,27 +32,23 @@
       height: 33px;
     }
 
-    &:last-child .social-list__link:hover {
-      & svg path {
-        fill: none;
-        stroke: @basic_green;
-      }
+    &:last-child:hover svg {
+      fill: none;
+      stroke: @basic_green;
     }
   }
 
   &__link {
     line-height: 0;
+    color: @special_grey-2;
+    text-decoration: none;
 
     &:hover {
-      & svg path {
-        fill: @basic_green;
-      }
+      color: @basic_green;
     }
 
     &:active {
-      & svg {
-        opacity: 0.3;
-      }
+      opacity: 0.3;
     }
   }
 }
